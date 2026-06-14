@@ -4,16 +4,6 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const glow = document.querySelector(".cursor-glow");
-
-window.addEventListener("mousemove", (event) => {
-  if (!glow) return;
-
-  glow.style.opacity = "1";
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
-});
-
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -25,7 +15,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.12,
+    threshold: 0.14,
   }
 );
 
