@@ -26,13 +26,13 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
   background: #ffffff;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #ffffff;
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -129,6 +129,8 @@ a {
   transform: translateY(-2px);
 }
 
+/* HERO */
+
 .hero {
   max-width: 1240px;
   min-height: 92vh;
@@ -153,7 +155,7 @@ a {
 }
 
 h1 {
-  max-width: 650px;
+  max-width: 680px;
   font-size: clamp(42px, 5.2vw, 66px);
   line-height: 1.02;
   letter-spacing: -0.06em;
@@ -245,8 +247,9 @@ h1 {
 .app-header {
   padding: 24px;
   border-radius: 24px;
-  background: var(--black);
-  color: #ffffff;
+  background: var(--surface-light);
+  border: 1px solid var(--line);
+  color: var(--black);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -254,7 +257,7 @@ h1 {
 }
 
 .app-header p {
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--soft);
   font-size: 13px;
   font-weight: 750;
 }
@@ -267,7 +270,7 @@ h1 {
 }
 
 .app-header button {
-  border: none;
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: #ffffff;
   color: var(--black);
@@ -332,6 +335,8 @@ h1 {
   color: var(--black);
 }
 
+/* CORE SECTIONS */
+
 .section {
   max-width: 1240px;
   margin: 0 auto;
@@ -370,6 +375,83 @@ h1 {
   margin-top: 14px;
   font-size: 17px;
 }
+
+/* TRUST STRIP */
+
+.trust-strip {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 36px 24px 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-item {
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.trust-item span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* BOOK BAND */
+
+.book-band {
+  padding: 90px 24px;
+  background: #ffffff;
+}
+
+.book-band-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 36px;
+  background: var(--black);
+  color: #ffffff;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.book-band-inner h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.book-band-inner p {
+  max-width: 680px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.book-band-inner .section-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.book-band-inner .primary-btn {
+  background: #ffffff;
+  color: var(--black);
+  box-shadow: none;
+  white-space: nowrap;
+}
+
+/* CARDS */
 
 .capability-grid,
 .why-grid,
@@ -415,7 +497,7 @@ h1 {
 .card h3,
 .mini-card h3,
 .solution-card h3,
-.process-list h3 {
+.timeline-step h3 {
   margin-top: 42px;
   font-size: 23px;
   letter-spacing: -0.04em;
@@ -424,7 +506,7 @@ h1 {
 .card p,
 .mini-card p,
 .solution-card p,
-.process-list p {
+.timeline-step p {
   margin-top: 10px;
   color: var(--muted);
 }
@@ -458,40 +540,52 @@ h1 {
   margin-top: 16px;
 }
 
-.process-list {
+/* WHO WE WORK WITH */
+
+.work-with-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
-.process-list div {
+.work-with-grid div {
   background: var(--surface-soft);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 26px;
-}
-
-.process-list span {
-  color: var(--soft);
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.industry-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.industry-list span {
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 12px 16px;
-  font-size: 14px;
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
   font-weight: 750;
   color: var(--text);
 }
+
+/* PROCESS TIMELINE */
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.timeline-step {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  min-height: 230px;
+}
+
+.timeline-step span {
+  color: var(--soft);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.timeline-step h3 {
+  margin-top: 48px;
+}
+
+/* CASE STUDIES */
 
 .case-study-grid {
   display: grid;
@@ -610,6 +704,23 @@ h1 {
   font-weight: 750;
 }
 
+/* CALENDLY */
+
+.calendly-section {
+  max-width: 1240px;
+}
+
+.calendly-inline-widget {
+  width: 100%;
+  height: 850px;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+/* CONTACT */
+
 .contact-section {
   padding-bottom: 110px;
 }
@@ -625,17 +736,11 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.email-link,
-.calendly-placeholder {
+.email-link {
   display: block;
   margin-top: 20px;
   color: var(--black);
   font-weight: 800;
-}
-
-.calendly-placeholder {
-  color: var(--soft);
-  margin-top: 8px;
 }
 
 .calendly-button {
@@ -676,17 +781,6 @@ textarea {
   resize: vertical;
 }
 
-button {
-  border: none;
-  border-radius: 999px;
-  background: var(--black);
-  color: #ffffff;
-  padding: 14px 18px;
-  font-size: 14px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
 .form-booking-button {
   width: 100%;
 }
@@ -700,6 +794,8 @@ button {
   color: var(--black);
   font-weight: 800;
 }
+
+/* FOOTER */
 
 footer {
   max-width: 1240px;
@@ -719,6 +815,8 @@ footer a {
   font-weight: 750;
 }
 
+/* ANIMATION */
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -730,6 +828,8 @@ footer a {
   transform: translateY(0);
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 1050px) {
   .hero,
   .contact-card,
@@ -738,15 +838,22 @@ footer a {
   }
 
   .capability-grid,
-  .process-list,
   .app-cards,
-  .case-study-grid {
+  .case-study-grid,
+  .trust-strip,
+  .work-with-grid,
+  .timeline {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .why-grid,
   .mini-grid {
     grid-template-columns: 1fr;
+  }
+
+  .book-band-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   footer {
@@ -769,7 +876,8 @@ footer a {
     padding: 128px 18px 60px;
   }
 
-  .section {
+  .section,
+  .book-band {
     padding: 70px 18px;
   }
 
@@ -782,9 +890,11 @@ footer a {
   }
 
   .capability-grid,
-  .process-list,
   .app-cards,
-  .case-study-grid {
+  .case-study-grid,
+  .trust-strip,
+  .work-with-grid,
+  .timeline {
     grid-template-columns: 1fr;
   }
 
@@ -796,199 +906,16 @@ footer a {
     display: none;
   }
 
-  .contact-card {
+  .contact-card,
+  .book-band-inner {
     padding: 24px;
   }
 
   .case-study-card {
     min-height: auto;
   }
-/* =========================================
-   TRUST STRIP
-========================================= */
-
-.trust-strip {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 28px 24px 80px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.trust-item {
-  padding: 24px;
-  border-radius: 24px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-}
-
-.trust-item strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.trust-item span {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* =========================================
-   BOOK BAND
-========================================= */
-
-.book-band {
-  padding: 0 24px 90px;
-}
-
-.book-band-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  border-radius: 36px;
-  background: var(--black);
-  color: white;
-  padding: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.book-band-inner h2 {
-  font-size: clamp(34px,4vw,52px);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
-  margin-bottom: 12px;
-}
-
-.book-band-inner p {
-  max-width: 650px;
-  color: rgba(255,255,255,.75);
-}
-
-.book-band-inner .primary-btn {
-  background: white;
-  color: black;
-  white-space: nowrap;
-}
-
-/* =========================================
-   WHO WE WORK WITH
-========================================= */
-
-.work-with-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 16px;
-}
-
-.work-with-grid div {
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 22px;
-  font-weight: 750;
-  text-align: center;
-}
-
-/* =========================================
-   PROCESS TIMELINE
-========================================= */
-
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 18px;
-}
-
-.timeline-step {
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  padding: 28px;
-}
-
-.timeline-step span {
-  color: var(--soft);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .15em;
-}
-
-.timeline-step h3 {
-  margin-top: 18px;
-  font-size: 24px;
-  letter-spacing: -0.04em;
-}
-
-.timeline-step p {
-  margin-top: 10px;
-  color: var(--muted);
-}
-
-/* =========================================
-   CALENDLY SECTION
-========================================= */
-
-.calendly-section {
-  max-width: 1240px;
-}
-
-.calendly-inline-widget {
-  width: 100%;
-  height: 850px;
-  border-radius: 32px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: white;
-}
-
-/* =========================================
-   SERVICE CARD LINKS
-========================================= */
-
-.capability-grid a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 1050px) {
-
-  .trust-strip,
-  .work-with-grid,
-  .timeline {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .book-band-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 760px) {
-
-  .trust-strip,
-  .work-with-grid,
-  .timeline {
-    grid-template-columns: 1fr;
-  }
-
-  .book-band {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .book-band-inner {
-    padding: 32px 24px;
-  }
 
   .calendly-inline-widget {
-    height: 700px;
+    height: 720px;
   }
 }
