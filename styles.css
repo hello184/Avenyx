@@ -418,21 +418,25 @@ h1 {
 .book-band-inner {
   max-width: 1240px;
   margin: 0 auto;
-  border-radius: 36px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  color: var(--text);
   padding: 48px;
+  border-radius: 36px;
+
+  background: #ffffff;
+  border: 1px solid var(--line);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 36px;
+
+  box-shadow: var(--shadow);
 }
 
 .book-band-inner h2 {
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.05;
   letter-spacing: -0.05em;
+  color: var(--text);
 }
 
 .book-band-inner p {
@@ -448,8 +452,11 @@ h1 {
 .book-band-inner .primary-btn {
   background: var(--black);
   color: #ffffff;
-  box-shadow: none;
   white-space: nowrap;
+}
+
+.book-band-inner .primary-btn:hover {
+  transform: translateY(-2px);
 }
 
 /* CARDS */
