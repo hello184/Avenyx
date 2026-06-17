@@ -926,4 +926,64 @@ footer a {
   .calendly-inline-widget {
     height: 720px;
   }
+/* STRATEGY CALL SECTION */
+
+.strategy-call-section {
+  padding: 90px 24px;
+  background: #ffffff;
+}
+
+.strategy-call-card {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 48px;
+  border-radius: 36px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: var(--shadow);
+}
+
+.strategy-call-card h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  color: var(--text);
+}
+
+.strategy-call-card p {
+  max-width: 680px;
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.strategy-call-card .section-label {
+  color: var(--soft);
+}
+
+.strategy-call-card .primary-btn {
+  background: var(--black);
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .strategy-call-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-call-section {
+    padding: 70px 18px;
+  }
+
+  .strategy-call-card {
+    padding: 24px;
+  }
 }
