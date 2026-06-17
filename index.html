@@ -12,6 +12,7 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,8 +32,7 @@
     <a
       class="nav-cta"
       href="https://calendly.com/elowell413/avenyx-discovery-call"
-      target="_blank"
-      rel="noopener noreferrer"
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elowell413/avenyx-discovery-call'}); return false;"
     >
       Book Discovery Call
     </a>
@@ -54,8 +54,7 @@
           <a
             class="primary-btn"
             href="https://calendly.com/elowell413/avenyx-discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elowell413/avenyx-discovery-call'}); return false;"
           >
             Book Discovery Call
           </a>
@@ -338,8 +337,7 @@
           <a
             class="secondary-btn calendly-button"
             href="https://calendly.com/elowell413/avenyx-discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elowell413/avenyx-discovery-call'}); return false;"
           >
             Schedule a Discovery Call
           </a>
@@ -355,8 +353,7 @@
           <a
             class="primary-btn form-booking-button"
             href="https://calendly.com/elowell413/avenyx-discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elowell413/avenyx-discovery-call'}); return false;"
           >
             Schedule Discovery Call
           </a>
@@ -381,6 +378,7 @@
     <p>© <span id="year"></span> Avenyx. All rights reserved.</p>
   </footer>
 
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="script.js"></script>
 </body>
 </html>
