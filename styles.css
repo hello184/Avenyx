@@ -247,7 +247,7 @@ h1 {
 .app-header {
   padding: 24px;
   border-radius: 24px;
-  background: var(--surface-light);
+  background: #ffffff;
   border: 1px solid var(--line);
   color: var(--black);
   display: flex;
@@ -270,10 +270,10 @@ h1 {
 }
 
 .app-header button {
-  border: 1px solid var(--line);
+  border: none;
   border-radius: 999px;
-  background: #ffffff;
-  color: var(--black);
+  background: var(--black);
+  color: #ffffff;
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 900;
@@ -419,8 +419,9 @@ h1 {
   max-width: 1240px;
   margin: 0 auto;
   border-radius: 36px;
-  background: var(--black);
-  color: #ffffff;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  color: var(--text);
   padding: 48px;
   display: flex;
   align-items: center;
@@ -437,16 +438,16 @@ h1 {
 .book-band-inner p {
   max-width: 680px;
   margin-top: 14px;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .book-band-inner .section-label {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--soft);
 }
 
 .book-band-inner .primary-btn {
-  background: #ffffff;
-  color: var(--black);
+  background: var(--black);
+  color: #ffffff;
   box-shadow: none;
   white-space: nowrap;
 }
