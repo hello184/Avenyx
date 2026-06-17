@@ -73,16 +73,11 @@ a {
   font-size: 19px;
 }
 
-.brand-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  background: var(--black);
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -128,8 +123,6 @@ a {
 .secondary-btn:hover {
   transform: translateY(-2px);
 }
-
-/* HERO */
 
 .hero {
   max-width: 1240px;
@@ -335,8 +328,6 @@ h1 {
   color: var(--black);
 }
 
-/* CORE SECTIONS */
-
 .section {
   max-width: 1240px;
   margin: 0 auto;
@@ -376,8 +367,6 @@ h1 {
   font-size: 17px;
 }
 
-/* TRUST STRIP */
-
 .trust-strip {
   max-width: 1240px;
   margin: 0 auto;
@@ -408,58 +397,48 @@ h1 {
   font-size: 14px;
 }
 
-/* BOOK BAND */
-
-.book-band {
+.strategy-call-section {
   padding: 90px 24px;
   background: #ffffff;
 }
 
-.book-band-inner {
+.strategy-call-card {
   max-width: 1240px;
   margin: 0 auto;
   padding: 48px;
   border-radius: 36px;
-
   background: #ffffff;
   border: 1px solid var(--line);
-
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 36px;
-
   box-shadow: var(--shadow);
 }
 
-.book-band-inner h2 {
+.strategy-call-card h2 {
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.05;
   letter-spacing: -0.05em;
   color: var(--text);
 }
 
-.book-band-inner p {
+.strategy-call-card p {
   max-width: 680px;
   margin-top: 14px;
   color: var(--muted);
 }
 
-.book-band-inner .section-label {
+.strategy-call-card .section-label {
   color: var(--soft);
 }
 
-.book-band-inner .primary-btn {
+.strategy-call-card .primary-btn {
   background: var(--black);
   color: #ffffff;
   white-space: nowrap;
 }
-
-.book-band-inner .primary-btn:hover {
-  transform: translateY(-2px);
-}
-
-/* CARDS */
 
 .capability-grid,
 .why-grid,
@@ -548,8 +527,6 @@ h1 {
   margin-top: 16px;
 }
 
-/* WHO WE WORK WITH */
-
 .work-with-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -565,8 +542,6 @@ h1 {
   font-weight: 750;
   color: var(--text);
 }
-
-/* PROCESS TIMELINE */
 
 .timeline {
   display: grid;
@@ -592,8 +567,6 @@ h1 {
 .timeline-step h3 {
   margin-top: 48px;
 }
-
-/* CASE STUDIES */
 
 .case-study-grid {
   display: grid;
@@ -712,8 +685,6 @@ h1 {
   font-weight: 750;
 }
 
-/* CALENDLY */
-
 .calendly-section {
   max-width: 1240px;
 }
@@ -726,8 +697,6 @@ h1 {
   border: 1px solid var(--line);
   background: #ffffff;
 }
-
-/* CONTACT */
 
 .contact-section {
   padding-bottom: 110px;
@@ -803,8 +772,6 @@ textarea {
   font-weight: 800;
 }
 
-/* FOOTER */
-
 footer {
   max-width: 1240px;
   margin: 0 auto;
@@ -823,8 +790,6 @@ footer a {
   font-weight: 750;
 }
 
-/* ANIMATION */
-
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -835,8 +800,6 @@ footer a {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 1050px) {
   .hero,
@@ -859,7 +822,7 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .book-band-inner {
+  .strategy-call-card {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -885,7 +848,7 @@ footer a {
   }
 
   .section,
-  .book-band {
+  .strategy-call-section {
     padding: 70px 18px;
   }
 
@@ -915,7 +878,7 @@ footer a {
   }
 
   .contact-card,
-  .book-band-inner {
+  .strategy-call-card {
     padding: 24px;
   }
 
@@ -925,65 +888,5 @@ footer a {
 
   .calendly-inline-widget {
     height: 720px;
-  }
-/* STRATEGY CALL SECTION */
-
-.strategy-call-section {
-  padding: 90px 24px;
-  background: #ffffff;
-}
-
-.strategy-call-card {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 48px;
-  border-radius: 36px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 36px;
-  box-shadow: var(--shadow);
-}
-
-.strategy-call-card h2 {
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
-  color: var(--text);
-}
-
-.strategy-call-card p {
-  max-width: 680px;
-  margin-top: 14px;
-  color: var(--muted);
-}
-
-.strategy-call-card .section-label {
-  color: var(--soft);
-}
-
-.strategy-call-card .primary-btn {
-  background: var(--black);
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-@media (max-width: 1050px) {
-  .strategy-call-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 760px) {
-  .strategy-call-section {
-    padding: 70px 18px;
-  }
-
-  .strategy-call-card {
-    padding: 24px;
   }
 }
